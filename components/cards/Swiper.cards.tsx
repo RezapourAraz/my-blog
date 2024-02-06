@@ -26,6 +26,7 @@ const SwiperCard: FC<SwiperCardProps> = ({ blog }) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        cursor: "pointer",
         height: 300,
       }}
     >
@@ -40,21 +41,40 @@ const SwiperCard: FC<SwiperCardProps> = ({ blog }) => {
       >
         <Grid
           container
-          sx={{ alignItems: "center", justifyContent: "space-between" }}
+          sx={{
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <Grid container sx={{ alignItems: "center" }}>
+          <Grid
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
             <IoMdTime style={{ color: "white" }} />
-            <Typography sx={{ color: "common.white" }}>{blog.date}</Typography>
+            <Typography sx={{ color: "common.white", fontSize: 14 }}>
+              {blog.date}
+            </Typography>
           </Grid>
-          <Grid container sx={{ alignItems: "center" }}>
+          ,
+          <Grid
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
             <IoBookmarkOutline style={{ color: "white" }} />
-            <Typography sx={{ color: "common.white" }}>
+            <Typography sx={{ color: "common.white", fontSize: 14 }}>
               {blog.category}
             </Typography>
           </Grid>
         </Grid>
 
-        <Typography sx={{ color: "common.white" }}>{blog.title}</Typography>
+        <Typography variant="h5" component="h3" sx={{ color: "common.white" }}>
+          {blog.title}
+        </Typography>
       </Grid>
     </Grid>
   );

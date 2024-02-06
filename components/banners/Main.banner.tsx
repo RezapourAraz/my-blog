@@ -12,7 +12,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
 import SwiperCard from "../cards/Swiper.cards";
 
 const blogs = [
@@ -61,7 +61,7 @@ const MainBanner = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode]}
           className="mySwiper"
           style={{ borderRadius: 20 }}
         >
