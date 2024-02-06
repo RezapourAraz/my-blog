@@ -8,19 +8,22 @@ const routes = ["خانه", "بلاگ ها", "درباره ما", "تماس با
 const TopHeader = () => {
   return (
     <Container maxWidth="md">
-      <Grid sx={{ textAlign: "center", p: 2 }}>
+      <Grid sx={{ textAlign: "center", p: 2, height: 150 }}>
         <Typography variant="h4">بلاگ من</Typography>
       </Grid>
-      <Grid>
+      <Grid sx={{ position: "relative" }}>
         <Grid
           container
           sx={{
             p: 1,
-            boxShadow: 2,
-            borderRadius: 1,
+            boxShadow: 1,
+            borderRadius: 2,
             zIndex: 10,
             justifyContent: "space-between",
             alignItems: "center",
+            position: "absolute",
+            bottom: -10,
+            bgcolor: "common.white",
           }}
         >
           <Grid container item md={10}>

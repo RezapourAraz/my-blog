@@ -1,3 +1,4 @@
+import MainBanner from "@/components/banners/Main.banner";
 import TopHeader from "@/components/headers/Top.headers";
 import MainLayout from "@/layouts/Main.layouts";
 import { Box } from "@mui/material";
@@ -13,7 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <Box></Box>
+        <Box>
+          <MainBanner />
+        </Box>
       </MainLayout>
     </>
   );
