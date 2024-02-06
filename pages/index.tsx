@@ -1,6 +1,7 @@
 import MainBanner from "@/components/banners/Main.banner";
 import TopHeader from "@/components/headers/Top.headers";
 import MainSection from "@/components/sections/Main.sections";
+import RelatedSection from "@/components/sections/Related.sections";
 import MainLayout from "@/layouts/Main.layouts";
 import { Box } from "@mui/material";
 import Head from "next/head";
@@ -17,6 +18,7 @@ export default function Home() {
         <Box>
           <MainBanner />
           <MainSection />
+          <RelatedSection />
         </Box>
       </MainLayout>
     </>
