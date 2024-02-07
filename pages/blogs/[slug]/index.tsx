@@ -4,11 +4,14 @@ import React from "react";
 import MainLayout from "@/layouts/Main.layouts";
 
 // Mui
-import { Box, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 
 // Icons
 import { FaEye } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa";
+import { IoBookmarkOutline } from "react-icons/io5";
+import { GoHash } from "react-icons/go";
+import CommentCard from "@/components/cards/Comment.cards";
 
 const BlogDetail = () => {
   return (
@@ -42,7 +45,15 @@ const BlogDetail = () => {
             <Grid sx={{ textAlign: "center", p: 2, mt: 2 }}>
               <Typography variant="h3">عنوان مطلب</Typography>
             </Grid>
-            <Grid sx={{ borderRadius: 2, overflow: "hidden", my: 1 }}>
+            <Grid
+              sx={{
+                borderRadius: 2,
+                overflow: "hidden",
+                my: 1,
+                transition: "all 0.2s ease-in-out",
+                ":hover": { cursor: "pointer", transform: "scale(1.001)" },
+              }}
+            >
               <img
                 width="100%"
                 height="100%"
@@ -53,6 +64,34 @@ const BlogDetail = () => {
             </Grid>
             <Grid>
               <Typography dangerouslySetInnerHTML={{ __html: "متن مطلب" }} />
+            </Grid>
+            <Grid
+              container
+              sx={{ alignItems: "center", justifyContent: "center", gap: 2 }}
+            >
+              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                <IoBookmarkOutline style={{ color: "gray" }} />
+                <Typography variant="caption" color={"grey.500"}>
+                  دسته بندی: عنوان دسته بندی
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                <GoHash style={{ color: "gray" }} />
+                <Typography variant="caption" color={"grey.500"}>
+                  برچسب ها: #عنوان برچسب
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid
+              sx={{
+                borderBottom: 2,
+                borderTop: 2,
+                borderColor: "grey.200",
+                p: 2,
+                my: 2,
+              }}
+            >
+              <CommentCard />
             </Grid>
           </Grid>
         </Grid>
