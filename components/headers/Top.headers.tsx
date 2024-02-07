@@ -10,11 +10,11 @@ const routes = [
     name: "خانه",
     route: "/",
   },
-  {
-    id: 2,
-    name: "بلاگ ها",
-    route: "/blogs",
-  },
+  // {
+  //   id: 2,
+  //   name: "بلاگ ها",
+  //   route: "/blogs",
+  // },
   {
     id: 3,
     name: "درباره ما",
@@ -62,6 +62,7 @@ const TopHeader = () => {
                     route.route === router.route ? "primary.main" : "initial",
                   cursor: "pointer",
                 }}
+                onClick={() => router.push(route.route)}
               >
                 {route.name}
               </Typography>
