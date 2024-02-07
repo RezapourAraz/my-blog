@@ -28,7 +28,7 @@ const ScrollToTopButton = () => {
           })
         }
       >
-        <IoMdArrowUp style={{ color: "black", fontSize: 18 }} />
+        <IoMdArrowUp style={{ color: "black" }} />
       </IconButton>
     </Grid>
   );

@@ -39,8 +39,8 @@ const ActionButton = () => {
           sx={{
             display: "flex",
             alignItems: "center",
-            borderBottom: 2,
-            borderColor: "grey.300",
+            // borderBottom: 2,
+            // borderColor: "grey.300",
             ":hover": {
               bgcolor: "primary.main",
               color: "common.white",
@@ -50,7 +50,7 @@ const ActionButton = () => {
         >
           <FaSearch />
         </Box>
-        <Box
+        {/* <Box
           p={2}
           sx={{
             display: "flex",
@@ -63,7 +63,7 @@ const ActionButton = () => {
           }}
         >
           <FaMoon />
-        </Box>
+        </Box> */}
       </Grid>
     </Grid>
   );

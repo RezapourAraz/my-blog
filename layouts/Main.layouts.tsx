@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, ReactNode, useEffect, useState } from "react";
 
 // Mui
 import { Box, Container } from "@mui/material";
@@ -8,16 +8,16 @@ import ActionButton from "@/components/buttons/Action.buttons";
 import ScrollToTopButton from "@/components/buttons/ScrollToTop.buttons";
 
 type MainLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   // state
-  const [visibility, setVisibility] = React.useState(false);
+  const [visibility, setVisibility] = useState(false);
 
   useEffect(() => {
     const handleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 500) {
         setVisibility(true);
       } else {
         setVisibility(false);
@@ -32,7 +32,6 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
       <TopHeader />
       <ActionButton />
       {visibility && <ScrollToTopButton />}
-
       <Box>{children}</Box>
       <FooterSection />
     </Container>
