@@ -4,7 +4,7 @@ import React from "react";
 import { Grid, IconButton } from "@mui/material";
 
 // Icons
-import { FaArrowUp } from "react-icons/fa";
+import { IoMdArrowUp } from "react-icons/io";
 
 const ScrollToTopButton = () => {
   return (
@@ -14,11 +14,21 @@ const ScrollToTopButton = () => {
         left: 50,
         bottom: 50,
         boxShadow: 1,
-        borderRadius: 100,
+        borderRadius: 2,
+        ":hover": {
+          bgcolor: "primary.main",
+        },
       }}
     >
-      <IconButton>
-        <FaArrowUp style={{ color: "black", fontSize: 18 }} />
+      <IconButton
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          })
+        }
+      >
+        <IoMdArrowUp style={{ color: "black", fontSize: 18 }} />
       </IconButton>
     </Grid>
   );
