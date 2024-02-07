@@ -62,7 +62,7 @@ const BlogCard = () => {
           </Grid>
           <Grid>
             <Typography
-              variant="h5"
+              variant="h3"
               sx={{
                 cursor: "pointer",
                 transition: "all 0.3s ease-in",
@@ -75,7 +75,7 @@ const BlogCard = () => {
             </Typography>
           </Grid>
           <Grid>
-            <Typography variant="body1">
+            <Typography variant="body2">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
               استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
               در ستون و سطرآنچنان که لازم است
