@@ -1,7 +1,7 @@
 import React from "react";
 
 // Mui
-import { Grid, Typography } from "@mui/material";
+import { Grid, Input, Typography } from "@mui/material";
 import RelatedCard from "../cards/Related.cards";
 
 const RelatedSection = () => {
@@ -10,7 +10,7 @@ const RelatedSection = () => {
       <Grid container>
         <Grid item md={4}>
           <Grid>
-            <Typography variant="h6">بلاگ های محبوب</Typography>
+            <Typography variant="h4">بلاگ های محبوب</Typography>
           </Grid>
           <Grid sx={{ my: 2 }}>
             <RelatedCard />
@@ -27,7 +27,7 @@ const RelatedSection = () => {
         </Grid>
         <Grid item md={4}>
           <Grid>
-            <Typography variant="h6">بلاگ های تصادفی</Typography>
+            <Typography variant="h4">بلاگ های تصادفی</Typography>
           </Grid>
           <Grid sx={{ my: 2 }}>
             <RelatedCard />
@@ -44,7 +44,19 @@ const RelatedSection = () => {
         </Grid>
         <Grid item md={4}>
           <Grid>
-            <Typography variant="h6">ارتباط با ما </Typography>
+            <Typography variant="h4">بلاگ های مرتبط</Typography>
+          </Grid>
+          <Grid sx={{ my: 2 }}>
+            <RelatedCard />
+          </Grid>
+          <Grid sx={{ my: 2 }}>
+            <RelatedCard />
+          </Grid>
+          <Grid sx={{ my: 2 }}>
+            <RelatedCard />
+          </Grid>
+          <Grid sx={{ my: 2 }}>
+            <RelatedCard />
           </Grid>
         </Grid>
       </Grid>

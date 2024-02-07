@@ -12,7 +12,7 @@ const useTheme = () => {
             fontFamily: "Samim, sans-serif",
             ".Toastify__toast ": {
               fontFamily: "Samim, sans-serif",
-              background: "#313338",
+              background: "#FAF9FB",
             },
           },
           "input:-webkit-autofill,input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active":

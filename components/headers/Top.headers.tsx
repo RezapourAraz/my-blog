@@ -2,10 +2,35 @@ import React from "react";
 
 // Mui
 import { Container, Grid, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 
-const routes = ["خانه", "بلاگ ها", "درباره ما", "تماس با ما"];
+const routes = [
+  {
+    id: 1,
+    name: "خانه",
+    route: "/",
+  },
+  {
+    id: 2,
+    name: "بلاگ ها",
+    route: "/blogs",
+  },
+  {
+    id: 3,
+    name: "درباره ما",
+    route: "/about-us",
+  },
+  {
+    id: 4,
+    name: "تماس با ما",
+    route: "/contact-us",
+  },
+];
 
 const TopHeader = () => {
+  // hooks
+  const router = useRouter();
+
   return (
     <Container maxWidth="md">
       <Grid sx={{ textAlign: "center", p: 2, height: 150 }}>
@@ -15,7 +40,7 @@ const TopHeader = () => {
         <Grid
           container
           sx={{
-            p: 1,
+            p: 2,
             boxShadow: 1,
             borderRadius: 2,
             zIndex: 10,
@@ -28,14 +53,26 @@ const TopHeader = () => {
         >
           <Grid container item md={10}>
             {routes.map((route) => (
-              <Typography sx={{ p: 1, mx: 2, color: "primary.main" }}>
-                {route.toLocaleUpperCase()}
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  p: 1,
+                  mx: 2,
+                  color:
+                    route.route === router.route ? "primary.main" : "initial",
+                  cursor: "pointer",
+                }}
+              >
+                {route.name}
               </Typography>
             ))}
           </Grid>
 
           <Grid container item md={2} sx={{ justifyContent: "flex-end" }}>
-            <Typography sx={{ p: 1, mx: 2, color: "primary.main" }}>
+            <Typography
+              variant="subtitle2"
+              sx={{ p: 1, mx: 2, color: "primary.main" }}
+            >
               @دنبال کردن
             </Typography>
           </Grid>
