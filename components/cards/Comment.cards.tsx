@@ -1,7 +1,7 @@
 import React from "react";
 
 // Mui
-import { Avatar, Grid, Typography } from "@mui/material";
+import { Avatar, Container, Grid, Typography } from "@mui/material";
 
 const CommentCard = () => {
   return (

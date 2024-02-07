@@ -13,6 +13,7 @@ import { IoBookmarkOutline } from "react-icons/io5";
 import { GoHash } from "react-icons/go";
 import CommentCard from "@/components/cards/Comment.cards";
 import AuthorCard from "@/components/cards/Author.cards";
+import LeaveReplayCard from "@/components/cards/LeaveReplay.cards";
 
 const BlogDetail = () => {
   return (
@@ -102,9 +103,21 @@ const BlogDetail = () => {
               }}
             >
               <Box sx={{ py: 2, textAlign: "center" }}>
-                <Typography>3 دیدگاه در مورد "عنوان مطلب"</Typography>
+                <Typography variant="h5">
+                  3 دیدگاه در مورد "عنوان مطلب"
+                </Typography>
               </Box>
               <CommentCard />
+            </Grid>
+            <Grid>
+              <Box sx={{ textAlign: "center" }}>
+                <Typography variant="h5">
+                  نظر خود را در مورد "عنوان مطلب" نوشته و ارسال کنید
+                </Typography>
+              </Box>
+              <Grid sx={{ p: 2 }}>
+                <LeaveReplayCard />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
