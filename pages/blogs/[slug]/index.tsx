@@ -12,6 +12,7 @@ import { FaRegComments } from "react-icons/fa";
 import { IoBookmarkOutline } from "react-icons/io5";
 import { GoHash } from "react-icons/go";
 import CommentCard from "@/components/cards/Comment.cards";
+import AuthorCard from "@/components/cards/Author.cards";
 
 const BlogDetail = () => {
   return (
@@ -91,6 +92,18 @@ const BlogDetail = () => {
                 my: 2,
               }}
             >
+              <AuthorCard />
+            </Grid>
+            <Grid
+              sx={{
+                p: 2,
+                my: 2,
+                px: 10,
+              }}
+            >
+              <Box sx={{ py: 2, textAlign: "center" }}>
+                <Typography>3 دیدگاه در مورد "عنوان مطلب"</Typography>
+              </Box>
               <CommentCard />
             </Grid>
           </Grid>
